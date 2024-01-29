@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Research Paper Blog</title>
+</head>
+<body>
+<h1>Welcome to my Research Paper Blog!</h1>
+<p>Here you'll find summaries of research papers I've read, covering a variety of topics.</p>
+<h2>Recent Summaries</h2>
+<ul>
+{% for paper in papers %}
+<li><a href="{{ url_for('summary', id=paper.id) }}">{{ paper.title }}</a></li>
+{% endfor %}
+</ul>
+<p>
+<a href="{{ url_for('about') }}">About Me</a> |
+<a href="{{ url_for('contact') }}">Contact Me</a>
+</p>
+</body>
+</html>
+
+
