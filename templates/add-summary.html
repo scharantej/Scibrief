@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add a Summary</title>
+</head>
+<body>
+<h1>Add a Summary</h1>
+<form action="{{ url_for('add_summary') }}" method="POST">
+<label for="title">Title:</label>
+<input type="text" id="title" name="title">
+<br>
+<label for="authors">Authors:</label>
+<input type="text" id="authors" name="authors">
+<br>
+<label for="abstract">Abstract:</label>
+<textarea id="abstract" name="abstract"></textarea>
+<br>
+<input type="submit" value="Add Summary">
+</form>
+<p>
+<a href="{{ url_for('index') }}">Back to Home</a>
+</p>
+</body>
+</html>
+
+
